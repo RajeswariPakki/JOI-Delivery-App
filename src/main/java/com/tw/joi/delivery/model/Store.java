@@ -5,14 +5,21 @@ import java.util.List;
 public class Store {
     private String storeId;
     private String zone;
-    private List<String> items;
+    //private List<String> items;
+    public List<Item> stockitems;
+    private String storename;
 
     public Store() {}
 
     public Store(String storeId, String zone, List<String> items) {
         this.storeId = storeId;
         this.zone = zone;
-        this.items = items;
+        //this.items = items;
+    }
+
+    public Store(String name, List<Item> items) {
+        this.storename=name;
+        this.stockitems=items;
     }
 
     public String getStoreId() {
@@ -31,11 +38,13 @@ public class Store {
         this.zone = zone;
     }
 
-    public List<String> getItems() {
-        return items;
+    public List<Item> getItems() {
+        return stockitems;
     }
 
-    public void setItems(List<String> items) {
+    public String getStoreName() {return storename;}
+
+    /*public void setItems(List<String> items) {
         this.items = items;
-    }
+    }*/
 }
