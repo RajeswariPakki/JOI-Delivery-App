@@ -23,10 +23,32 @@ public class StaticData {
                                             new Store("2",ZONEB,Arrays.asList("Bread","Milk")),
                                             new Store("3",ZONEC,Arrays.asList("Juice","Bread")));
 
+    public static List<Store> mystore = Arrays.asList(
+            new Store("Store A", Arrays.asList(
+                    new Item("Milk", 20, 17),
+                    new Item("Bread", 30, 26),
+                    new Item("Jam", 45, 44))),
+                    new Store("Store B", Arrays.asList(
+                            new Item("Fruits", 50, 30),
+                            new Item("Shampoo", 40, 36))
+            ));
+
     static List<Item> items=Arrays.asList(new Item("1", "Notebook", "", 15),
                                           new Item("2","Keyboard", "",50),
                                           new Item("3","Mouse", "",25),
                                           new Item("4","Monitor", "",75));
+
+    public static List<Store> getStores() {
+        return stores;
+    }
+
+    public static List<Item> getItems() {
+        return items;
+    }
+
+    public static List<DistanceMap> getDistanceMap() {
+        return distanceMap;
+    }
 
 
 
